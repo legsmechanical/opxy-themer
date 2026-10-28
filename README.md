@@ -4,6 +4,8 @@ Make your own colour theme for the teenage engineering OP-XY's screens, in the b
 greys, the swatches the OS paints with, bigger text. Preview every screen, then download the files to copy onto the
 device. Made for **OS 1.2.0**.
 
+**Open it: https://legsmechanical.github.io/opxy-themer/** (Chrome, Edge, Firefox or Safari on a computer).
+
 - **Only screen files change.** The app writes SVGs for `/content/display`; it never builds or touches the OS.
 - **Your files, not ours.** TE's screens and font aren't in this repository. You load your own `display` folder;
   the app checks each file against OS 1.2.0's stock hashes (`engine/stock-1.2.0.json`) and works from those.
@@ -49,3 +51,8 @@ node tests/xml-agree.mjs STOCK_DISPLAY_DIR    # the fast XML parser sees what a 
 
 `tools/bundle-theme.mjs` turns a Python-tool theme into a self-contained one; `tools/stock-manifest.mjs` makes the
 stock hash list.
+
+## Licence
+
+MIT (`LICENSE`). Not affiliated with teenage engineering. OP-XY is their product; the screen files and font the app
+works on are theirs and are never included here.
