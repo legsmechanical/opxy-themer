@@ -1,0 +1,346 @@
+{
+ "os": "1.2.0",
+ "folder": "/content/display",
+ "files": {
+  "UniversNextPro-Light.otf": {
+   "sha256": "baac94abed7ed145c21e833fe52177e9e6ce7e0c490e77b406aebb169f675c57",
+   "size": 73660
+  },
+  "adsr.svg": {
+   "sha256": "a63f3161ae1d2bd750d1f1d6ccbeef5c2332ac5b844282e8618ad182b461bc92",
+   "size": 4623
+  },
+  "arpeggio.svg": {
+   "sha256": "fc34c915ce26d712362aac0ab91e2e58c33cb303cb114ec3e3f276de2ad707db",
+   "size": 47628
+  },
+  "aux_track.svg": {
+   "sha256": "d32037f77d8f1173f3d9d6327efa7dde3d7f405cb8823b7c26152f76303a4022",
+   "size": 8905
+  },
+  "auxlfo.svg": {
+   "sha256": "f5df94f9bc8ee2a9e9134ef1233a5e1ae659bebd55009f0326b4d7933b678f96",
+   "size": 31708
+  },
+  "bar.svg": {
+   "sha256": "c165adfa47cf083db7a0387a1e375e96cb34e6a15a3cb7d95e26a50c5045c5b4",
+   "size": 19057
+  },
+  "battery_low.svg": {
+   "sha256": "2fa2704cdf9553d5ee691c1710f8142d4e42a21f7e0645ddfc54b58e5baeddca",
+   "size": 3552
+  },
+  "chord.svg": {
+   "sha256": "f479ace3570e75b35cc1c85a223f4bcd34b1c00dc844da482ec51d0a671b17f2",
+   "size": 12233
+  },
+  "clock.svg": {
+   "sha256": "f2f45090ba5a1937dc2ec8c45f68794aef57ebaac1187a20da51b30085eb6281",
+   "size": 6618
+  },
+  "com.svg": {
+   "sha256": "8ee9f012f84be97ff4a20ec21ce44c3b07643a589794150e6b30f0f12619a841",
+   "size": 33459
+  },
+  "cv.svg": {
+   "sha256": "ecc5d6b8ac07713cc113366b420ea9eebdb1f1113efb41771fa776f97f3c8135",
+   "size": 6450
+  },
+  "dbox.svg": {
+   "sha256": "ad8141397ae992933a52bf2754d421ea7f58c18d86fb83f3a95b9eb67267bdb4",
+   "size": 46264
+  },
+  "dbox_t2.svg": {
+   "sha256": "23dfd08fcb794e7ec8a2bcbe012aad339329dc49fd0258d231cbd9d84e09ca05",
+   "size": 3973
+  },
+  "delay.svg": {
+   "sha256": "7e2fab88d9b30403359cb8f006f2f136c84d3d7c9f219043f04c27cb672b0892",
+   "size": 11025
+  },
+  "delete_popup.svg": {
+   "sha256": "17f1a76d0c9bca4f76da4149d6940f1668c3c279b6e8dea035af6aac85ce2c07",
+   "size": 6888
+  },
+  "device_icons.svg": {
+   "sha256": "63b088531dc6716ab2bca65db10224075ff8a3e43acdcee65205956779935f46",
+   "size": 345939
+  },
+  "device_popup.svg": {
+   "sha256": "355ad4dae0f1abc520603b723dd4a3d188bd2dfae4487a3dd3bc2fbf0074cc48",
+   "size": 12911
+  },
+  "devices.svg": {
+   "sha256": "792b8f58378e8fd4b08853398fdd1bf981d910dcfe49b4d69fd01a76fad4cc29",
+   "size": 18316
+  },
+  "dissolve.svg": {
+   "sha256": "f416542fe3d918493b2282eefd084151ff4cbabf5d508878be23510fa042087a",
+   "size": 27916
+  },
+  "drum2.svg": {
+   "sha256": "51e60f1c2985d06a5ac3b0eecd80b479430827a4a0817b96be3dafcef47327ef",
+   "size": 8316
+  },
+  "duallfo.svg": {
+   "sha256": "5cd5b63cca31ad967fec2416e348f0e19340df43493496d0147fe78dce214b1b",
+   "size": 25022
+  },
+  "dynaenv.svg": {
+   "sha256": "9539afeea926f84a000f1246d994dac9ea2c1ede6c9369e66eddeee6a57f38a6",
+   "size": 4931
+  },
+  "ep.svg": {
+   "sha256": "8d6b03d2a40032deab04d087c117a48a54307fe776b4c714664fa187927d9c07",
+   "size": 10442
+  },
+  "eq.svg": {
+   "sha256": "1c797d6bdfea62666ab52c97831dd434d998183016da00ed21395976cba69239",
+   "size": 45335
+  },
+  "external_midi.svg": {
+   "sha256": "d361e7647cdde41824c165cc248ca1226ace38aa46d24f014da0520f2858d2a0",
+   "size": 7252
+  },
+  "filter.svg": {
+   "sha256": "7e6f02b822b3829fcee7f5a9edb124c41f63fa0a6b1f9d4d1fb37d7687ae38b9",
+   "size": 8119
+  },
+  "fmstrings.svg": {
+   "sha256": "cdade78ea3358059d02d4ce7e567a849bf0dfd6a0085c9bdd81e357d46e077b6",
+   "size": 6243
+  },
+  "fmstrings2.svg": {
+   "sha256": "bcb808e05d5ab289f63524624b27a8ef30520479c4686c462e52d9d99f95f287",
+   "size": 8699
+  },
+  "font_test.svg": {
+   "sha256": "b954130343a758490edac0ae7ae6d59048ea45eaf219a4b62c7595ba056da020",
+   "size": 5657
+  },
+  "fx_filter.svg": {
+   "sha256": "4b86915511adbc664831288e53d1afffebaa728eb98c64ef9619db9fe3701b42",
+   "size": 3308
+  },
+  "fx_send.svg": {
+   "sha256": "b5a340b65fffeb0bdca6aca9f89b8779599df07ff70e790b36a3292103fa7702",
+   "size": 4856
+  },
+  "game.svg": {
+   "sha256": "cccf13d4a2b57a05bad92f7dd6df8608e54fa0fdc21da79676ff8de4b948ebed",
+   "size": 9981
+  },
+  "generic_fx.svg": {
+   "sha256": "32de1c377bcf204e017993571e799a8a2033a1b550420e369255dce354c9e1e3",
+   "size": 12252
+  },
+  "generic_fx2.svg": {
+   "sha256": "a8ff338aa74e8706caf30dffc8a5444d644f100c2b19933c74800ca60e77e2da",
+   "size": 3783
+  },
+  "generic_synth.svg": {
+   "sha256": "804dfd4f9b1b202ef1ad6ea81a48d5dc38bb1806c95b6bb5e600fc99d4b78416",
+   "size": 16991
+  },
+  "group_popup.svg": {
+   "sha256": "3978dfac69b5f525ad94bf0ed996f2ed64f9924ee33de258ae999ed519f88dad",
+   "size": 3314
+  },
+  "hardsync.svg": {
+   "sha256": "f9e2791d0463565eea5b0a9885fd5021ad0e160ba0e01e8889708489f3f5fc28",
+   "size": 8295
+  },
+  "hold.svg": {
+   "sha256": "e36eeff899cd45b6c34489812c955bc74b8c03e92a5d76abef59e87519c70315",
+   "size": 6630
+  },
+  "in.svg": {
+   "sha256": "466632244371b293a7c382de6d83929f791ed4c642b845c66aa8b76d0d6c69f3",
+   "size": 9181
+  },
+  "legal.svg": {
+   "sha256": "8a15aeba8f0fd6ecebcddd92fd23cfc32b37745c30e6b6c2a74d09d573f56202",
+   "size": 68334
+  },
+  "lfo_popup.svg": {
+   "sha256": "46c1d64d969648c99226be727ee677a7b2a3f185948364905a9daedb305a30f0",
+   "size": 2330
+  },
+  "magic.svg": {
+   "sha256": "9523e6114f39b745a3b22dd8d7a684597dc8081228d48d528c75c82a03f5c01f",
+   "size": 10439
+  },
+  "master.svg": {
+   "sha256": "1ab9fe3f2c8788f22458a6acc9aa03c60f3beda1734389931d28ac5d3db06870",
+   "size": 6612
+  },
+  "master_dist.svg": {
+   "sha256": "251c8706e6f1af15f9fb3eed96bfeab4ee6456ad3314437d4601b80c5effaf06",
+   "size": 19291
+  },
+  "mixer.svg": {
+   "sha256": "2a85c1fddeb35b1211aea20e68e1ab583919c2df141ad90dae4ca6dc18466ad3",
+   "size": 25321
+  },
+  "monitor.svg": {
+   "sha256": "2838b17b2d2a9a784956ea77b091cd97ce70b5328642a240cdbcc0d61719c99e",
+   "size": 15473
+  },
+  "notoemoji-subset.otf": {
+   "sha256": "ac922b9fd53c0d6065ec83ea7d6611a6ca440d81e056a7346181d9bc1b290340",
+   "size": 73988
+  },
+  "octave.svg": {
+   "sha256": "1c4b6e111cd9d4a69321b2486317a3b968a3530cd37be915da794ad00ab4304e",
+   "size": 1681
+  },
+  "off_popup.svg": {
+   "sha256": "71acb933f07a033d7d87c3628dfe5af1d992b05afcc06e3a6be00e60d35d2ef0",
+   "size": 1969
+  },
+  "ok.svg": {
+   "sha256": "9deee3d7d86992cd600ee857967e4c40dc6d913e9460d2fc7c8079deffc48b24",
+   "size": 169551
+  },
+  "organ.svg": {
+   "sha256": "40a2304043f5ec819263fabb1c3632b406df59e520c1f3590095463cb2fb04b4",
+   "size": 17726
+  },
+  "palette.svg": {
+   "sha256": "593a01ee17ee3629f358ed18be252611f3e941320e9d509df2705ad6ee82f27e",
+   "size": 1922
+  },
+  "pattern.svg": {
+   "sha256": "7531de91acc0331e580de8265c34792728736235c9ace989474b9ad03275c779",
+   "size": 26503
+  },
+  "pitchbend.svg": {
+   "sha256": "aed3abc6ced1e49ddb7ae643097addabe27bcb05954cb15bad4d2ddfde62db31",
+   "size": 16093
+  },
+  "playmode.svg": {
+   "sha256": "1de5fd953e2202c1ad0b12beb728a2d3a40e2eaab3a6c752bd9c57c166eb81f1",
+   "size": 7135
+  },
+  "power_popup.svg": {
+   "sha256": "59e9d8125fdc6943d922cba19eedaf51de91c835abc2b96f14535ced3df0beab",
+   "size": 11293
+  },
+  "prefs.svg": {
+   "sha256": "bb514a778dcd9bc40b4bdb1ba8cb35a8800923243cac65d2636e42c2f7fcd17c",
+   "size": 2060
+  },
+  "prefs_generic.svg": {
+   "sha256": "6bb90dc894bdce2751e1d319d82928d4eab27cd0c5e0f5fbabba777571ca7695",
+   "size": 3775
+  },
+  "prefs_left_menu.svg": {
+   "sha256": "e88d132de1fef1a2ce2e6d2cef2cb16718a8af37eb0cfde71daa37e3171a7e66",
+   "size": 1591
+  },
+  "presetbrowser.svg": {
+   "sha256": "9e17c0284eb7a25e9a7366a2d7301befc107c5063f48616c335ab77aceccaef2",
+   "size": 31164
+  },
+  "prism.svg": {
+   "sha256": "8347b6e7f2e3c9286681e17abf51bc3df13ee48559655db73d24036c10b4f9b2",
+   "size": 4283
+  },
+  "project.svg": {
+   "sha256": "c8f57400d4c9dbb110904ccbd99ffff67c015d508bc9f571594ead47f4de83b4",
+   "size": 26021
+  },
+  "punch_popup.svg": {
+   "sha256": "247bbd2108970ecac885192ca2bbb4ea695cbd0c800374a26854ac08227deffe",
+   "size": 167181
+  },
+  "reroutelfo.svg": {
+   "sha256": "7c93d2aa3e04d0ba0e8ee68d6788230358425191fe8280a29934ce3387884a60",
+   "size": 18671
+  },
+  "reverb.svg": {
+   "sha256": "5bc7c4667df9056eda73eebfc546e0d861eb06c334aae6fefecb048fdb1cbb38",
+   "size": 13748
+  },
+  "rndlfo.svg": {
+   "sha256": "8e8dd62c904aa1301ba1893457c5d0119a8aab0126017f4a6761ca20b4784110",
+   "size": 37583
+  },
+  "routing.svg": {
+   "sha256": "2b07c0e18fe65b5a50078a18bfb94b5f8033c0d117ae3c9d559c43ee2e807dd1",
+   "size": 15204
+  },
+  "sample_editor.svg": {
+   "sha256": "737c0931731f787f75989d3441a6461ad2a93f3073080fc11975502d9ff81967",
+   "size": 22431
+  },
+  "sample_slicer.svg": {
+   "sha256": "7cb6a2c6ed2456db0d81e49aae965c17089f355b2d686368c71f6c507d816cba",
+   "size": 5296
+  },
+  "sampler.svg": {
+   "sha256": "f5cebe95140ea39e52cd0b0714f414906dc0c2dbefad53d398a4dbf67011e6fe",
+   "size": 13712
+  },
+  "save.svg": {
+   "sha256": "63f1c169b9be9ede9f4cd04ea574f001dfc945c939e2b63ea3a73785d5301335",
+   "size": 6193
+  },
+  "seq_popup.svg": {
+   "sha256": "de44bee78335ff448096b240e82522332bcdf08f0f9d4eefee4b0fe9856901a9",
+   "size": 3379
+  },
+  "sidechainlfo.svg": {
+   "sha256": "b3cd53b10c5bd6d2adee7ec95db1b35d8c232c8cdff236a538b8734440635723",
+   "size": 11846
+  },
+  "singlelfo.svg": {
+   "sha256": "874098c55ac9cfc3c5edb37f65c6b196f456afd5e776e6a7601497d72cbed54a",
+   "size": 37031
+  },
+  "slinky.svg": {
+   "sha256": "449251eb0f33f451316d839c061d88d06d96962e8f3bbbb7c38e6f7119d9f052",
+   "size": 10585
+  },
+  "songmode.svg": {
+   "sha256": "43184be3f5251c36f4fac130fefbe09cd37346d7fb1992426d63d57bf1994dce",
+   "size": 22332
+  },
+  "step_popup.svg": {
+   "sha256": "5324274f9febd1b837847435bf1cb85e89add43299f42993b2b7e44e93df47a9",
+   "size": 23332
+  },
+  "tape.svg": {
+   "sha256": "956a9cbeff2734235930b1ba2e7f5eb331f3cb1a240b7fb30c4aefc85cdcbfc8",
+   "size": 12795
+  },
+  "tbuttons.svg": {
+   "sha256": "b95272e9625389096df3209a1eb15a9a766d34e7c5db965e1272e634bb4f3cf6",
+   "size": 4655
+  },
+  "tempo.svg": {
+   "sha256": "747b58756622182eba1343684cc9abee1397b99a22ac1491ac80b48b2e632a76",
+   "size": 9316
+  },
+  "track_popup.svg": {
+   "sha256": "185e9ce08cf565f6eb89ed1d88d8133ac6ba8637abc699efb1cfa8faab172493",
+   "size": 1805
+  },
+  "tuning_editor.svg": {
+   "sha256": "dc4d6e0051cd55d6968855c0ddaf3f1909f12b32b634661d7999bdd004bf3624",
+   "size": 14728
+  },
+  "usb_audio.svg": {
+   "sha256": "cacdd515df657b52f8b753359c72217b92d48961456375d1d5209325392dd999",
+   "size": 7378
+  },
+  "wavetable.svg": {
+   "sha256": "fb15c4a635b9903435a8616ed89aea6c2226d208c06b0f8b48e45ac232d49fc0",
+   "size": 2182
+  },
+  "xy_palette.svg": {
+   "sha256": "5bb482d922f49d67effb9a92d0dd79498e3621c19ea9c35d062ef3e35fdcc7eb",
+   "size": 1306
+  }
+ }
+}

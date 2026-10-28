@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OP-XY Themer</title>
+<meta name="description" content="Make your own colour theme for the teenage engineering OP-XY's screens, in the browser.">
+<link rel="stylesheet" href="app/app.css">
+<script type="module" src="app/main.js"></script>
+</head>
+<body>
+<header class="top">
+  <div class="brand"><span class="dot"></span>OP-XY <b>Themer</b></div>
+  <input id="theme-name" class="name" hidden aria-label="Theme name" spellcheck="false">
+  <div class="actions" id="actions" hidden>
+    <button id="import-theme" class="ghost">Open theme…</button>
+    <button id="save-theme" class="ghost">Save theme</button>
+    <button id="download" class="primary" disabled>Download for OP-XY</button>
+  </div>
+  <input id="import-file" type="file" accept=".json,application/json" hidden>
+</header>
+
+<section id="welcome" class="welcome">
+  <div class="intro">
+    <h1>Colour your OP-XY's screens.</h1>
+    <p>Pick a hue for each knob, tint the greys, preview every screen, and download the files to copy onto your device.
+      Nothing is uploaded: your files stay in this browser.</p>
+    <p class="note">Made for <b>OS 1.2.0</b>. The app only changes screen files in <code>/content/display</code>, never the OS.</p>
+  </div>
+  <div id="drop" class="drop" tabindex="0">
+    <div class="drop-title">Load your stock screen files</div>
+    <p>Drop your device's <code>display</code> folder here, or</p>
+    <label class="primary button">Choose folder…<input id="pick-folder" type="file" webkitdirectory multiple hidden></label>
+    <p id="load-status" class="status" role="status"></p>
+  </div>
+  <details class="howto">
+    <summary>How do I get the <code>display</code> folder?</summary>
+    <ol>
+      <li><b>Enable the dev menu once</b> with <a href="https://open-xy.com" target="_blank" rel="noopener">Open-XY's builder</a>
+        or <a href="https://github.com/bagofwaffles/ferret" target="_blank" rel="noopener">Ferret</a> (browser MIDI, sets one flag).</li>
+      <li><b>Enter te-boot:</b> hold <b>com</b> while powering on.</li>
+      <li>Choose <b>3. dev menu</b>, then <b>2. mtp file transfer (mac)</b> or <b>3. mtp file transfer (windows)</b>.</li>
+      <li>Copy the folder <code>content/display</code> to your computer (on a Mac use an MTP app such as OpenMTP).
+        Keep this copy: it is your backup.</li>
+    </ol>
+    <p class="note">The app checks every file against OS 1.2.0's stock files, so it works only from unmodified screens.</p>
+  </details>
+</section>
+
+<main id="studio" class="studio" hidden>
+  <aside class="panel" id="panel">
+    <section>
+      <h2>Start from</h2>
+      <div class="presets" id="presets"></div>
+    </section>
+    <section>
+      <h2>Knobs</h2>
+      <p class="hint">Each knob's colour marks what it moves. <i>Main</i> is the bright tone, <i>dim</i> its darker partner.</p>
+      <div id="encoders" class="encoders"></div>
+    </section>
+    <section>
+      <h2>Neutrals</h2>
+      <p class="hint">The eight greys behind everything else. Tint them all at once, or set each one.</p>
+      <div class="tint">
+        <label>Hue <input id="tint-hue" type="range" min="0" max="360" value="60"></label>
+        <label>Amount <input id="tint-amount" type="range" min="0" max="60" value="0"></label>
+      </div>
+      <div id="greys" class="swatches"></div>
+    </section>
+    <section>
+      <h2>Drawn by the OS</h2>
+      <p class="hint">Waveforms, the mixer, envelopes and other moving parts are painted by the OS from these
+        swatches. Unset greys follow the neutrals.</p>
+      <div id="palette" class="palette"></div>
+    </section>
+    <section>
+      <h2>Text</h2>
+      <label class="check"><input id="bigger-text" type="checkbox"> Bigger text <span class="hint">(fitted so nothing collides)</span></label>
+    </section>
+    <section>
+      <details id="advanced">
+        <summary>Advanced: theme JSON</summary>
+        <p class="hint">Every rule the theme uses, including which elements belong to which knob.
+          The format is in <a href="docs/theme-format.md" target="_blank">docs/theme-format.md</a>.</p>
+        <textarea id="json" spellcheck="false" rows="14"></textarea>
+        <div class="row"><button id="json-apply" class="ghost">Apply JSON</button><span id="json-status" class="status"></span></div>
+      </details>
+    </section>
+  </aside>
+
+  <section class="preview">
+    <div class="toolbar">
+      <div class="seg" id="view" role="tablist">
+        <button data-view="theme" class="on">Theme</button><button data-view="stock">Stock</button><button data-view="compare">Compare</button>
+      </div>
+      <div class="chips" id="groups"></div>
+      <span id="build-status" class="status" role="status"></span>
+    </div>
+    <div id="grid" class="grid"></div>
+  </section>
+</main>
+
+<dialog id="zoom" class="zoom">
+  <form method="dialog"><button class="close" aria-label="Close">×</button></form>
+  <h3 id="zoom-title"></h3>
+  <div id="zoom-body" class="zoom-body"></div>
+  <p id="zoom-note" class="hint"></p>
+</dialog>
+
+<dialog id="install" class="zoom">
+  <form method="dialog"><button class="close" aria-label="Close">×</button></form>
+  <h3>Put your theme on the OP-XY</h3>
+  <ol>
+    <li>Unzip the download. <code>display/</code> holds your themed screens; <code>restore/display/</code> holds the stock
+      versions of the same files, to undo.</li>
+    <li>Enter te-boot (hold <b>com</b> while powering on) → <b>3. dev menu</b> → <b>mtp file transfer</b>.</li>
+    <li>Copy everything in <code>display/</code> into <code>content/display</code> on the device, replacing the files there.</li>
+    <li>Power off, then on.</li>
+  </ol>
+  <p class="note">To undo, copy <code>restore/display/</code> the same way. If a screen ever fails to load, the same
+    te-boot route still works, because the screens are only files.</p>
+  <p id="install-summary" class="hint"></p>
+</dialog>
+</body>
+</html>

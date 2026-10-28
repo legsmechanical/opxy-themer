@@ -1,0 +1,17 @@
+{
+ "name": "Blue",
+ "_note": "The diagnostic blue theme on the device since 2026-10-25.",
+ "greys": {
+  "grey1": "#0F1A24",
+  "grey2": "#1E3346",
+  "grey3": "#2D4D69",
+  "grey4": "#3C668C",
+  "grey5": "#4B80AF",
+  "grey6": "#5A99D2",
+  "grey7": "#7DB3E6",
+  "grey8": "#A8CCF0"
+ },
+ "palette": {
+  "red": "#00E5FF"
+ }
+}

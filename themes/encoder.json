@@ -1,0 +1,2176 @@
+{
+ "name": "Encoder",
+ "_note": [
+  "Encoder colour theme, after the OP-1: colour means 'the encoder of this colour moves this'.",
+  "Hues are the OP-1's (blue, green, orange, white), ordered dark to light like the OP-XY's grey knobs,",
+  "so encoder 4 stays white and the physical knobs still read correctly. Everything else is a",
+  "barely warm neutral ramp: structure and illustration carry no colour. Red is kept for record/alerts."
+ ],
+ "greys": {
+  "grey1": "#1A1918",
+  "grey2": "#333231",
+  "grey3": "#4C4A48",
+  "grey4": "#656361",
+  "grey5": "#7E7C79",
+  "grey6": "#979592",
+  "grey7": "#B0AEAA",
+  "grey8": "#CECBC6"
+ },
+ "encoders": [
+  {
+   "name": "blue",
+   "dim": "#1D2C47",
+   "main": "#2A62C8"
+  },
+  {
+   "name": "green",
+   "dim": "#284A3A",
+   "main": "#178A4C"
+  },
+  {
+   "name": "orange",
+   "dim": "#B58A6A",
+   "main": "#F2701C"
+  },
+  {
+   "name": "white",
+   "dim": "#B3AFA7",
+   "main": "#E6E2DA"
+  }
+ ],
+ "palette": {
+  "red": "#E5371B"
+ },
+ "roles": {
+  "_note": [
+   "Which stock-screen elements belong to an encoder, so a theme can give them that encoder's hue.",
+   "Theme-independent: written once against the stock 1.2.0 screens. Rule syntax: opxy_theme.py docstring.",
+   "TE's own coding (OP-XY knobs are dark grey, mid grey, light grey, white): encoder 1 is black or an",
+   "outline, 2 is a dark grey, 3 a light grey, 4 white. Only static SVG colours are covered here; what",
+   "the code paints at runtime comes from the xy_palette.svg swatches."
+  ],
+  "_param_bar": "the 8-cell strip at the top: two cells (title, value) per encoder",
+  "dbox.svg": [
+   {
+    "tags": [
+     "rect"
+    ],
+    "region": [
+     0,
+     0,
+     480,
+     22
+    ],
+    "max": [
+     70,
+     25
+    ],
+    "black": true,
+    "mode": "column",
+    "columns": [
+     0,
+     120,
+     240,
+     360,
+     480
+    ]
+   }
+  ],
+  "dissolve.svg": [
+   {
+    "tags": [
+     "rect"
+    ],
+    "region": [
+     0,
+     0,
+     480,
+     22
+    ],
+    "max": [
+     70,
+     25
+    ],
+    "black": true,
+    "mode": "column",
+    "columns": [
+     0,
+     120,
+     240,
+     360,
+     480
+    ]
+   }
+  ],
+  "ep.svg": [
+   {
+    "tags": [
+     "rect"
+    ],
+    "region": [
+     0,
+     0,
+     480,
+     22
+    ],
+    "max": [
+     70,
+     25
+    ],
+    "black": true,
+    "mode": "column",
+    "columns": [
+     0,
+     120,
+     240,
+     360,
+     480
+    ]
+   }
+  ],
+  "hardsync.svg": [
+   {
+    "tags": [
+     "rect"
+    ],
+    "region": [
+     0,
+     0,
+     480,
+     22
+    ],
+    "max": [
+     70,
+     25
+    ],
+    "black": true,
+    "mode": "column",
+    "columns": [
+     0,
+     120,
+     240,
+     360,
+     480
+    ]
+   }
+  ],
+  "prism.svg": [
+   {
+    "tags": [
+     "rect"
+    ],
+    "region": [
+     0,
+     0,
+     480,
+     22
+    ],
+    "max": [
+     70,
+     25
+    ],
+    "black": true,
+    "mode": "column",
+    "columns": [
+     0,
+     120,
+     240,
+     360,
+     480
+    ]
+   }
+  ],
+  "wavetable.svg": [
+   {
+    "tags": [
+     "rect"
+    ],
+    "region": [
+     0,
+     0,
+     480,
+     22
+    ],
+    "max": [
+     70,
+     25
+    ],
+    "black": true,
+    "mode": "column",
+    "columns": [
+     0,
+     120,
+     240,
+     360,
+     480
+    ]
+   }
+  ],
+  "fmstrings.svg": [
+   {
+    "tags": [
+     "polygon"
+    ],
+    "region": [
+     0,
+     0,
+     480,
+     32
+    ],
+    "max": [
+     130,
+     40
+    ],
+    "mode": "column",
+    "columns": [
+     0,
+     120,
+     240,
+     360,
+     480
+    ],
+    "tone": "main"
+   }
+  ],
+  "_lfo": "LFO cards: the four dots are the encoders (rank = TE's dark-to-light order). Labels are left alone: the OS repaints them at runtime (grey3 to grey8 by knob activity, firmware-map/palette_semantics.md)",
+  "singlelfo.svg": [
+   {
+    "within": "^dots$",
+    "tags": [
+     "circle"
+    ],
+    "black": true,
+    "mode": "rank",
+    "tone": "main"
+   }
+  ],
+  "auxlfo.svg": [
+   {
+    "within": "^dots$",
+    "tags": [
+     "circle"
+    ],
+    "black": true,
+    "mode": "rank",
+    "tone": "main"
+   }
+  ],
+  "rndlfo.svg": [
+   {
+    "within": "^dots$",
+    "tags": [
+     "circle"
+    ],
+    "black": true,
+    "mode": "rank",
+    "tone": "main"
+   }
+  ],
+  "reroutelfo.svg": [
+   {
+    "within": "^dots$",
+    "tags": [
+     "circle"
+    ],
+    "black": true,
+    "mode": "rank",
+    "tone": "main"
+   }
+  ],
+  "duallfo.svg": [
+   {
+    "within": "^dots$",
+    "tags": [
+     "circle"
+    ],
+    "black": true,
+    "mode": "rank",
+    "tone": "main"
+   }
+  ],
+  "sidechainlfo.svg": [
+   {
+    "within": "^dots$",
+    "tags": [
+     "circle"
+    ],
+    "black": true,
+    "mode": "rank",
+    "tone": "main"
+   }
+  ],
+  "_lists": "four-row lists with a dot per row (encoder 4's ring stays white, which is encoder 4's hue)",
+  "fx_send.svg": [
+   {
+    "tags": [
+     "circle"
+    ],
+    "region": [
+     320,
+     30,
+     340,
+     170
+    ],
+    "max": [
+     12,
+     12
+    ],
+    "black": true,
+    "mode": "rank",
+    "tone": "main"
+   }
+  ],
+  "playmode.svg": [
+   {
+    "tags": [
+     "circle"
+    ],
+    "region": [
+     320,
+     30,
+     340,
+     170
+    ],
+    "max": [
+     12,
+     12
+    ],
+    "black": true,
+    "mode": "rank",
+    "tone": "main"
+   }
+  ],
+  "bar.svg": [
+   {
+    "tags": [
+     "circle"
+    ],
+    "region": [
+     210,
+     85,
+     230,
+     145
+    ],
+    "max": [
+     12,
+     12
+    ],
+    "black": true,
+    "mode": "rank",
+    "tone": "main"
+   }
+  ],
+  "_four_up": "screens laid out as four controls side by side",
+  "organ.svg": [
+   {
+    "tags": [
+     "path"
+    ],
+    "region": [
+     0,
+     0,
+     480,
+     45
+    ],
+    "min": [
+     45,
+     30
+    ],
+    "max": [
+     55,
+     40
+    ],
+    "mode": "column",
+    "columns": [
+     0,
+     120,
+     240,
+     360,
+     480
+    ],
+    "tone": "main"
+   }
+  ],
+  "master_dist.svg": [
+   {
+    "tags": [
+     "path"
+    ],
+    "attr": "fill",
+    "region": [
+     0,
+     95,
+     480,
+     125
+    ],
+    "min": [
+     45,
+     15
+    ],
+    "max": [
+     60,
+     25
+    ],
+    "black": true,
+    "mode": "column",
+    "columns": [
+     0,
+     120,
+     240,
+     360,
+     480
+    ],
+    "tone": "main"
+   }
+  ],
+  "arpeggio.svg": [
+   {
+    "tags": [
+     "path"
+    ],
+    "region": [
+     0,
+     15,
+     480,
+     75
+    ],
+    "min": [
+     45,
+     45
+    ],
+    "max": [
+     55,
+     55
+    ],
+    "mode": "column",
+    "columns": [
+     130,
+     186,
+     240,
+     293,
+     350
+    ],
+    "tone": "main"
+   }
+  ],
+  "chord.svg": [
+   {
+    "tags": [
+     "path"
+    ],
+    "region": [
+     0,
+     15,
+     480,
+     75
+    ],
+    "min": [
+     45,
+     45
+    ],
+    "max": [
+     55,
+     55
+    ],
+    "mode": "column",
+    "columns": [
+     125,
+     183,
+     238,
+     293,
+     350
+    ],
+    "tone": "main"
+   }
+  ],
+  "external_midi.svg": [
+   {
+    "tags": [
+     "rect"
+    ],
+    "attr": "fill",
+    "region": [
+     0,
+     80,
+     480,
+     145
+    ],
+    "min": [
+     60,
+     60
+    ],
+    "max": [
+     70,
+     70
+    ],
+    "black": true,
+    "within": "^page1$",
+    "mode": "rank",
+    "tone": "dim"
+   },
+   {
+    "tags": [
+     "rect"
+    ],
+    "attr": "fill",
+    "region": [
+     0,
+     80,
+     480,
+     145
+    ],
+    "min": [
+     60,
+     60
+    ],
+    "max": [
+     70,
+     70
+    ],
+    "black": true,
+    "within": "^page2$",
+    "mode": "rank",
+    "tone": "dim"
+   }
+  ],
+  "generic_fx2.svg": [
+   {
+    "tags": [
+     "rect"
+    ],
+    "attr": "fill",
+    "region": [
+     0,
+     80,
+     480,
+     145
+    ],
+    "min": [
+     90,
+     60
+    ],
+    "max": [
+     110,
+     70
+    ],
+    "black": true,
+    "mode": "column",
+    "columns": [
+     40,
+     140,
+     240,
+     340,
+     440
+    ],
+    "tone": "dim"
+   }
+  ],
+  "magic.svg": [
+   {
+    "tags": [
+     "rect"
+    ],
+    "attr": "fill",
+    "region": [
+     0,
+     80,
+     480,
+     145
+    ],
+    "min": [
+     100,
+     60
+    ],
+    "mode": "column",
+    "columns": [
+     0,
+     65,
+     195,
+     420,
+     480
+    ],
+    "tone": "dim"
+   }
+  ],
+  "generic_synth.svg": [
+   {
+    "tags": [
+     "rect"
+    ],
+    "attr": "fill",
+    "min": [
+     100,
+     200
+    ],
+    "max": [
+     130,
+     230
+    ],
+    "mode": "column",
+    "columns": [
+     0,
+     120,
+     240,
+     360,
+     480
+    ],
+    "tone": "dim"
+   }
+  ],
+  "aux_track.svg": [
+   {
+    "within": "^box[1-4]$",
+    "tags": [
+     "path"
+    ],
+    "mode": "column",
+    "columns": [
+     100,
+     180,
+     250,
+     330,
+     400
+    ],
+    "tone": "main"
+   }
+  ],
+  "_envelope": "attack, decay, sustain, release are encoders 1-4",
+  "adsr.svg": [
+   {
+    "within": "^a$",
+    "mode": 1,
+    "tone": "main"
+   },
+   {
+    "within": "^d$",
+    "mode": 2,
+    "tone": "main"
+   },
+   {
+    "within": "^s$",
+    "mode": 3,
+    "tone": "main"
+   },
+   {
+    "within": "^r$",
+    "mode": 4,
+    "tone": "main"
+   }
+  ]
+ },
+ "art": {
+  "_note": [
+   "Per-screen art direction: individual elements coloured for what they are or what they show.",
+   "White and black stay wherever they help the picture. Knob hues come from encoders.json as enc1..enc4.",
+   "Rule syntax: opxy_theme.py docstring. Exemplar screens first (2026-10-25).",
+   "Device test 2026-10-26: the OS repaints hardsync's beam (palette table grey2..7) and prism's rays (nearest-palette snap) at runtime, so those rules show nothing on the device; kept as placeholders for the patched-OS rung."
+  ],
+  "hardsync.svg": [
+   {
+    "_": "the beam leaving the dryer: heat, ember at the nozzle to white-hot",
+    "within": "^beam$",
+    "tags": [
+     "rect"
+    ],
+    "mode": "order",
+    "colours": [
+     "#4A0E0B",
+     "#7A1410",
+     "#B5221A",
+     "#E2441B",
+     "#F2701C",
+     "#F79A2C",
+     "#FBC85A",
+     "#FFEDB8"
+    ]
+   },
+   {
+    "_": "the two element dots on the body glow",
+    "tags": [
+     "circle"
+    ],
+    "region": [
+     80,
+     115,
+     110,
+     128
+    ],
+    "max": [
+     8,
+     8
+    ],
+    "colour": "#F2701C"
+   },
+   {
+    "_": "the sync curve and its end handles",
+    "within": "^curve$",
+    "attr": "stroke",
+    "tags": [
+     "path",
+     "line"
+    ],
+    "colour": "#F79A2C"
+   },
+   {
+    "within": "^curve$",
+    "attr": "fill",
+    "tags": [
+     "path"
+    ],
+    "colour": "#FBC85A"
+   }
+  ],
+  "prism.svg": [
+   {
+    "_": "each optic in its knob's colour, left to right",
+    "within": "^prism$",
+    "colour": "enc1.main"
+   },
+   {
+    "within": "^convex",
+    "colour": "enc2.main"
+   },
+   {
+    "within": "^concave$",
+    "colour": "enc3.main"
+   },
+   {
+    "_": "light splits after the prism",
+    "within": "^ray1$",
+    "colour": "#FF4F7B"
+   },
+   {
+    "within": "^ray2$",
+    "colour": "#FFD23F"
+   },
+   {
+    "within": "^ray3$",
+    "colour": "#5CE1FF"
+   }
+  ],
+  "ep.svg": [
+   {
+    "_": "four stacked layers; the little tabs say which knob owns each (keys = 1)",
+    "within": "^layers$",
+    "tags": [
+     "polygon"
+    ],
+    "attr": "fill",
+    "region": [
+     150,
+     100,
+     330,
+     215
+    ],
+    "min": [
+     160,
+     60
+    ],
+    "mode": "rank",
+    "colours": [
+     "enc4.dim",
+     "enc3.main",
+     "enc2.main"
+    ]
+   },
+   {
+    "within": "^knob2$",
+    "colour": "enc2.main",
+    "black": true
+   },
+   {
+    "within": "^knob3$",
+    "colour": "enc3.main",
+    "black": true
+   },
+   {
+    "within": "^knob4$",
+    "colour": "enc4.main",
+    "black": true
+   },
+   {
+    "_": "sharps take knob 1's blue; the naturals stay ivory",
+    "within": "^keys$",
+    "tags": [
+     "polygon"
+    ],
+    "attr": "fill",
+    "max": [
+     60,
+     40
+    ],
+    "black": true,
+    "colour": "enc1.main"
+   }
+  ],
+  "slinky.svg": [
+   {
+    "_": "each step its own colour: dark front, mid top, light side",
+    "within": "^step1$",
+    "tags": [
+     "polygon",
+     "polyline"
+    ],
+    "attr": "fill",
+    "mode": "rank",
+    "colours": [
+     "#24164F",
+     "#4B32A0",
+     "#6E52C8"
+    ]
+   },
+   {
+    "_": "each step its own colour: dark front, mid top, light side",
+    "within": "^step2$",
+    "tags": [
+     "polygon",
+     "polyline"
+    ],
+    "attr": "fill",
+    "mode": "rank",
+    "colours": [
+     "#4F1238",
+     "#B23A7E",
+     "#D85CA0"
+    ]
+   },
+   {
+    "_": "each step its own colour: dark front, mid top, light side",
+    "within": "^step3$",
+    "tags": [
+     "polygon",
+     "polyline"
+    ],
+    "attr": "fill",
+    "mode": "rank",
+    "colours": [
+     "#5A1E10",
+     "#D9572B",
+     "#F58A4B"
+    ]
+   },
+   {
+    "_": "each step its own colour: dark front, mid top, light side",
+    "within": "^step4$",
+    "tags": [
+     "polygon",
+     "polyline"
+    ],
+    "attr": "fill",
+    "mode": "rank",
+    "colours": [
+     "#5A4310",
+     "#E8B830",
+     "#FFE07A"
+    ]
+   },
+   {
+    "within": "^reference_x5F_steps$",
+    "tags": [
+     "polygon",
+     "polyline"
+    ],
+    "attr": "fill",
+    "pick": [
+     0,
+     3
+    ],
+    "mode": "rank",
+    "colours": [
+     "#4F1238",
+     "#B23A7E",
+     "#D85CA0"
+    ]
+   },
+   {
+    "within": "^reference_x5F_steps$",
+    "tags": [
+     "polygon",
+     "polyline"
+    ],
+    "attr": "fill",
+    "pick": [
+     3,
+     6
+    ],
+    "mode": "rank",
+    "colours": [
+     "#5A1E10",
+     "#D9572B",
+     "#F58A4B"
+    ]
+   },
+   {
+    "within": "^reference_x5F_steps$",
+    "tags": [
+     "polygon",
+     "polyline"
+    ],
+    "attr": "fill",
+    "pick": [
+     6,
+     9
+    ],
+    "mode": "rank",
+    "colours": [
+     "#5A4310",
+     "#E8B830",
+     "#FFE07A"
+    ]
+   },
+   {
+    "within": "^reference_x5F_steps$",
+    "tags": [
+     "polygon",
+     "polyline"
+    ],
+    "attr": "fill",
+    "pick": [
+     9,
+     12
+    ],
+    "mode": "rank",
+    "colours": [
+     "#24164F",
+     "#4B32A0",
+     "#6E52C8"
+    ]
+   }
+  ],
+  "fmstrings.svg": [
+   {
+    "_": "a varnished violin with gold strings, in a cool waveform",
+    "within": "^violin_x5F_body$",
+    "attr": "fill",
+    "tags": [
+     "path"
+    ],
+    "min": [
+     40,
+     60
+    ],
+    "colour": "#C9702F"
+   },
+   {
+    "within": "^violin_x5F_fg$",
+    "attr": "stroke",
+    "tags": [
+     "path"
+    ],
+    "any": true,
+    "colour": "#5A2A12"
+   },
+   {
+    "within": "^violin_x5F_fg$",
+    "attr": "stroke",
+    "tags": [
+     "line"
+    ],
+    "any": true,
+    "region": [
+     230,
+     80,
+     250,
+     148
+    ],
+    "colour": "#F2D27A"
+   },
+   {
+    "within": "^waveform$",
+    "attr": "stroke",
+    "any": true,
+    "colour": "#6FB7F0"
+   }
+  ],
+  "dbox.svg": [
+   {
+    "_": "every drum model its own colour",
+    "within": "^model_x5F_kick_x5F_a$",
+    "any": true,
+    "colour": "#FF5A3C"
+   },
+   {
+    "within": "^model_x5F_snare_x5F_a$",
+    "any": true,
+    "colour": "#FFC93C"
+   },
+   {
+    "within": "^model_x5F_tambourine$",
+    "any": true,
+    "colour": "#F7E36A"
+   },
+   {
+    "within": "^model_x5F_clap$",
+    "any": true,
+    "colour": "#FF7AB6"
+   },
+   {
+    "within": "^model_x5F_closed_x5F_hat$",
+    "any": true,
+    "colour": "#7DE2D1"
+   },
+   {
+    "within": "^model_x5F_congas$",
+    "any": true,
+    "colour": "#E0864A"
+   },
+   {
+    "within": "^model_x5F_fm_x5F_noise$",
+    "any": true,
+    "colour": "#B892FF"
+   },
+   {
+    "within": "^model_x5F_pitch$",
+    "any": true,
+    "colour": "#6FB7F0"
+   },
+   {
+    "within": "^model_x5F_resonator$",
+    "any": true,
+    "colour": "#5CD68A"
+   },
+   {
+    "within": "^model_x5F_shaker$",
+    "any": true,
+    "colour": "#FFA94D"
+   },
+   {
+    "within": "^model_x5F_slap$",
+    "any": true,
+    "colour": "#FF6F91"
+   }
+  ],
+  "tempo.svg": [
+   {
+    "_": "volume rings: quiet amber in the middle, loud red outside",
+    "within": "^metronome_x5F_level$",
+    "attr": "stroke",
+    "mode": "order",
+    "colours": [
+     "#FF4F3C",
+     "#FF6A3A",
+     "#FF8638",
+     "#FFA136",
+     "#FFB940",
+     "#FFCC55",
+     "#FFDC70",
+     "#FFE890",
+     "#FFF2B0",
+     "#FFF8D0"
+    ]
+   },
+   {
+    "_": "the pendulum weight",
+    "within": "^block$",
+    "attr": "fill",
+    "tags": [
+     "path"
+    ],
+    "colour": "#FFD23F"
+   }
+  ],
+  "hold.svg": [
+   {
+    "_": "the held loop, ring by ring",
+    "tags": [
+     "path"
+    ],
+    "attr": "fill",
+    "min": [
+     100,
+     60
+    ],
+    "mode": "order",
+    "colours": [
+     "#3A2A8C",
+     "#5B3FB0",
+     "#8A48C8",
+     "#B84FB8",
+     "#E0589A",
+     "#F57A7A",
+     "#F79A5C",
+     "#F9BD52",
+     "#FBDD6A"
+    ]
+   },
+   {
+    "tags": [
+     "path",
+     "line"
+    ],
+    "attr": "fill",
+    "max": [
+     16,
+     14
+    ],
+    "colour": "#FBDD6A"
+   }
+  ],
+  "delay.svg": [
+   {
+    "_": "the echo band: a cyan tape of repeats, black stripes kept",
+    "tags": [
+     "rect"
+    ],
+    "attr": "fill",
+    "region": [
+     0,
+     80,
+     480,
+     145
+    ],
+    "min": [
+     90,
+     60
+    ],
+    "colour": "#3CC8C0"
+   }
+  ],
+  "reverb.svg": [
+   {
+    "_": "the room: a deep violet hall, the white ball bouncing in it",
+    "within": "^static$",
+    "tags": [
+     "rect"
+    ],
+    "attr": "fill",
+    "colour": "#7B6BE0"
+   },
+   {
+    "within": "^size$",
+    "colour": "#FFFFFF"
+   }
+  ],
+  "magic.svg": [
+   {
+    "_": "the hand belongs to knob 1",
+    "tags": [
+     "path"
+    ],
+    "region": [
+     0,
+     80,
+     65,
+     145
+    ],
+    "min": [
+     50,
+     50
+    ],
+    "black": true,
+    "colour": "enc1.main"
+   },
+   {
+    "_": "the scale notes sparkle",
+    "within": "^dots$",
+    "black": true,
+    "colour": "#FF4FA3"
+   }
+  ],
+  "fx_filter.svg": [
+   {
+    "_": "the bands as light: low = red, high = violet (long to short waves)",
+    "within": "^static$",
+    "tags": [
+     "rect"
+    ],
+    "attr": "fill",
+    "mode": "order",
+    "colours": [
+     "#5E1218",
+     "#C2471E",
+     "#3FA367",
+     "#9BA4F5"
+    ]
+   }
+  ],
+  "filter.svg": [
+   {
+    "_": "the same spectrum as the FX filter",
+    "within": "^static$",
+    "tags": [
+     "rect"
+    ],
+    "attr": "fill",
+    "mode": "order",
+    "colours": [
+     "#5E1218",
+     "#C2471E",
+     "#3FA367",
+     "#9BA4F5"
+    ]
+   },
+   {
+    "_": "warmth: compression cool, drive hot",
+    "within": "^comp_x5F_meter$",
+    "attr": "fill",
+    "colour": "#3CC8C0"
+   },
+   {
+    "within": "^drive_x5F_meter$",
+    "attr": "fill",
+    "colour": "#F2701C"
+   }
+  ],
+  "eq.svg": [
+   {
+    "_": "each flap row in its knob's colour (TE's own grey pairs: low g2, mid g4, high g6)",
+    "within": "^low_x5F_flaps$",
+    "attr": "fill",
+    "colour": "enc1.main"
+   },
+   {
+    "within": "^mid_x5F_flaps$",
+    "attr": "fill",
+    "colour": "enc2.main"
+   },
+   {
+    "within": "^high_x5F_flaps$",
+    "attr": "fill",
+    "colour": "enc3.main"
+   }
+  ],
+  "master.svg": [
+   {
+    "_": "the VU meter: cream scale, red zone over 0 dB",
+    "tags": [
+     "path"
+    ],
+    "attr": "both",
+    "region": [
+     380,
+     50,
+     425,
+     80
+    ],
+    "min": [
+     20,
+     10
+    ],
+    "colour": "#E5371B"
+   },
+   {
+    "within": "^static$",
+    "tags": [
+     "line",
+     "path"
+    ],
+    "attr": "stroke",
+    "region": [
+     290,
+     40,
+     430,
+     80
+    ],
+    "colour": "#F3E6C4"
+   }
+  ],
+  "singlelfo.svg": [
+   {
+    "_": "speed note: knob 1",
+    "within": "^speed_x5F_a$",
+    "black": true,
+    "any": false,
+    "colour": "enc1.main"
+   },
+   {
+    "_": "amount arrow: knob 2",
+    "within": "^(amount_x5F_arrow|pitch_x5F_amount)$",
+    "black": true,
+    "colour": "enc2.main"
+   },
+   {
+    "_": "destination icon: knob 3",
+    "within": "^(regular|midi|targets)$",
+    "max": [
+     40,
+     30
+    ],
+    "black": true,
+    "colour": "enc3.main"
+   },
+   {
+    "_": "the waveform drawings, in this card's colour",
+    "within": "^(shapes|graph|sin|saw|sqr|exp|blip|env_1_|env|wave_x5F_bounds)$",
+    "attr": "stroke",
+    "colour": "#8A48C8"
+   },
+   {
+    "_": "the wave curve on the last card",
+    "tags": [
+     "path"
+    ],
+    "attr": "stroke",
+    "region": [
+     300,
+     50,
+     420,
+     170
+    ],
+    "min": [
+     90,
+     90
+    ],
+    "colour": "#8A48C8",
+    "max": [
+     112,
+     115
+    ]
+   },
+   {
+    "tags": [
+     "path"
+    ],
+    "attr": "fill",
+    "region": [
+     300,
+     50,
+     420,
+     170
+    ],
+    "max": [
+     6,
+     6
+    ],
+    "colour": "#8A48C8"
+   }
+  ],
+  "auxlfo.svg": [
+   {
+    "_": "speed note: knob 1",
+    "within": "^speed_x5F_a$",
+    "black": true,
+    "any": false,
+    "colour": "enc1.main"
+   },
+   {
+    "_": "amount arrow: knob 2",
+    "within": "^(amount_x5F_arrow|pitch_x5F_amount)$",
+    "black": true,
+    "colour": "enc2.main"
+   },
+   {
+    "_": "destination icon: knob 3",
+    "within": "^(regular|midi|targets)$",
+    "max": [
+     40,
+     30
+    ],
+    "black": true,
+    "colour": "enc3.main"
+   },
+   {
+    "_": "the waveform drawings, in this card's colour",
+    "within": "^(shapes|graph|sin|saw|sqr|exp|blip|env_1_|env|wave_x5F_bounds)$",
+    "attr": "stroke",
+    "colour": "#138F86"
+   }
+  ],
+  "rndlfo.svg": [
+   {
+    "_": "speed note: knob 1",
+    "within": "^speed_x5F_a$",
+    "black": true,
+    "any": false,
+    "colour": "enc1.main"
+   },
+   {
+    "_": "amount arrow: knob 2",
+    "within": "^(amount_x5F_arrow|pitch_x5F_amount)$",
+    "black": true,
+    "colour": "enc2.main"
+   },
+   {
+    "_": "destination icon: knob 3",
+    "within": "^(regular|midi|targets)$",
+    "max": [
+     40,
+     30
+    ],
+    "black": true,
+    "colour": "enc3.main"
+   },
+   {
+    "_": "the waveform drawings, in this card's colour",
+    "within": "^(shapes|graph|sin|saw|sqr|exp|blip|env_1_|env|wave_x5F_bounds)$",
+    "attr": "stroke",
+    "colour": "#C98A10"
+   },
+   {
+    "_": "the wave curve on the last card",
+    "tags": [
+     "path"
+    ],
+    "attr": "stroke",
+    "region": [
+     300,
+     50,
+     420,
+     170
+    ],
+    "min": [
+     90,
+     90
+    ],
+    "colour": "#C98A10",
+    "max": [
+     112,
+     115
+    ]
+   },
+   {
+    "tags": [
+     "path"
+    ],
+    "attr": "fill",
+    "region": [
+     300,
+     50,
+     420,
+     170
+    ],
+    "max": [
+     6,
+     6
+    ],
+    "colour": "#C98A10"
+   }
+  ],
+  "duallfo.svg": [
+   {
+    "_": "speed note: knob 1",
+    "within": "^speed_x5F_a$",
+    "black": true,
+    "any": false,
+    "colour": "enc1.main"
+   },
+   {
+    "_": "amount arrow: knob 2",
+    "within": "^(amount_x5F_arrow|pitch_x5F_amount)$",
+    "black": true,
+    "colour": "enc2.main"
+   },
+   {
+    "_": "the second amount arrow: knob 3",
+    "within": "^amp_x5F_amount$",
+    "black": true,
+    "colour": "enc3.main"
+   },
+   {
+    "_": "the waveform drawings, in this card's colour",
+    "within": "^(shapes|graph|sin|saw|sqr|exp|blip|env_1_|env|wave_x5F_bounds)$",
+    "attr": "stroke",
+    "colour": "#D0408A"
+   }
+  ],
+  "sidechainlfo.svg": [
+   {
+    "_": "the metronome pumps red (it ducks to the beat)",
+    "within": "^metronome$",
+    "black": true,
+    "colour": "#E5371B"
+   },
+   {
+    "_": "amount arrow: knob 2",
+    "within": "^amount_x5F_arrow$",
+    "black": true,
+    "colour": "enc2.main"
+   },
+   {
+    "_": "attack slope: knob 3",
+    "within": "^attack$",
+    "attr": "stroke",
+    "colour": "enc3.main"
+   }
+  ],
+  "arpeggio.svg": [
+   {
+    "_": "every arp step its own colour, walking the hue circle; black sides kept",
+    "within": "^boxes$",
+    "tags": [
+     "rect"
+    ],
+    "attr": "fill",
+    "mode": "column",
+    "columns": [
+     170,
+     181,
+     191,
+     201,
+     211,
+     221,
+     231,
+     241,
+     251,
+     261,
+     271,
+     281,
+     291,
+     301,
+     330
+    ],
+    "colours": [
+     "AD87ED",
+     "CE7BD0",
+     "E373A8",
+     "ED737A",
+     "E97C49",
+     "D88B05",
+     "B69E22",
+     "8DAD33",
+     "4EB869",
+     "2CB79B",
+     "2DB2BB",
+     "08AEE0",
+     "56A1F9",
+     "8D92F9"
+    ]
+   },
+   {
+    "within": "^boxes$",
+    "tags": [
+     "polygon"
+    ],
+    "attr": "fill",
+    "mode": "column",
+    "columns": [
+     175,
+     186,
+     196,
+     206,
+     216,
+     226,
+     236,
+     246,
+     256,
+     266,
+     276,
+     286,
+     296,
+     306,
+     335
+    ],
+    "colours": [
+     "D9C6FF",
+     "F1BDF1",
+     "FCBCD6",
+     "FDBEBF",
+     "FBC3AA",
+     "F7C78F",
+     "E1D28D",
+     "C6DB99",
+     "A8E2B1",
+     "8FE5CE",
+     "85E3EA",
+     "97DCFB",
+     "B4D4FC",
+     "C8CDFC"
+    ]
+   }
+  ],
+  "chord.svg": [
+   {
+    "_": "the chord's notes, one colour per voice in each stack (pink, gold, mint, lavender)",
+    "within": "^boxes$",
+    "tags": [
+     "rect",
+     "polygon"
+    ],
+    "attr": "fill",
+    "mode": "order",
+    "colours": [
+     "#FF7AB6",
+     "#FF7AB6",
+     "#FFC93C",
+     "#FFC93C",
+     "#7DE2D1",
+     "#7DE2D1",
+     "#B892FF",
+     "#B892FF",
+     "#FF7AB6",
+     "#FF7AB6",
+     "#FFC93C",
+     "#FFC93C",
+     "#7DE2D1",
+     "#7DE2D1",
+     "#B892FF",
+     "#B892FF"
+    ]
+   }
+  ],
+  "dbox_t2.svg": [
+   {
+    "_": "the hit cooling as it decays: bright strike to violet tail",
+    "within": "^a$",
+    "attr": "stroke",
+    "colour": "#FFD23F"
+   },
+   {
+    "within": "^d$",
+    "attr": "stroke",
+    "colour": "#FF8A3C"
+   },
+   {
+    "within": "^s$",
+    "attr": "stroke",
+    "colour": "#FF4F7B"
+   },
+   {
+    "within": "^r$",
+    "attr": "stroke",
+    "colour": "#B892FF"
+   },
+   {
+    "within": "^adot$",
+    "attr": "fill",
+    "colour": "#FFD23F"
+   },
+   {
+    "within": "^(asdot|tdot)$",
+    "attr": "fill",
+    "colour": "#FF8A3C"
+   },
+   {
+    "within": "^srdot$",
+    "attr": "fill",
+    "colour": "#FF4F7B"
+   },
+   {
+    "within": "^rdot$",
+    "attr": "fill",
+    "colour": "#B892FF"
+   }
+  ],
+  "cv.svg": [
+   {
+    "_": "the voltmeter: red needle, cream scale",
+    "within": "^meter$",
+    "attr": "stroke",
+    "colour": "#E5371B"
+   },
+   {
+    "tags": [
+     "path",
+     "line"
+    ],
+    "attr": "stroke",
+    "region": [
+     190,
+     105,
+     290,
+     135
+    ],
+    "colour": "#F3E6C4"
+   }
+  ],
+  "tape.svg": [
+   {
+    "_": "the tape itself: brown oxide under the black waveform; the red record head stays",
+    "tags": [
+     "rect",
+     "path"
+    ],
+    "attr": "fill",
+    "region": [
+     0,
+     80,
+     446,
+     110
+    ],
+    "min": [
+     400,
+     25
+    ],
+    "colour": "#B07A45"
+   }
+  ],
+  "reroutelfo.svg": [
+   {
+    "_": "source disc: knob 1",
+    "within": "^source$",
+    "tags": [
+     "circle"
+    ],
+    "black": true,
+    "colour": "enc1.main"
+   },
+   {
+    "_": "amount arrow: knob 2",
+    "within": "^amount_x5F_arrow$",
+    "black": true,
+    "colour": "enc2.main"
+   },
+   {
+    "_": "the wave curve on the last card",
+    "tags": [
+     "path"
+    ],
+    "attr": "stroke",
+    "region": [
+     300,
+     50,
+     420,
+     170
+    ],
+    "min": [
+     90,
+     90
+    ],
+    "max": [
+     112,
+     115
+    ],
+    "colour": "#FF4F7B"
+   },
+   {
+    "tags": [
+     "path"
+    ],
+    "attr": "fill",
+    "region": [
+     300,
+     50,
+     420,
+     170
+    ],
+    "max": [
+     6,
+     6
+    ],
+    "colour": "#FF4F7B"
+   },
+   {
+    "_": "knob-cap variants; device 2026-10-26: knobs still show grey, so these templates aren't what's drawn (or the OS recolours them). Harmless.",
+    "within": "^cap_x5F_red$",
+    "attr": "fill",
+    "colour": "#D8402A"
+   },
+   {
+    "within": "^cap_x5F_brown$",
+    "attr": "fill",
+    "colour": "#8A5A3A"
+   },
+   {
+    "within": "^cap_x5F_white$",
+    "tags": [
+     "path"
+    ],
+    "attr": "fill",
+    "colour": "#F2EFE8"
+   },
+   {
+    "within": "^cap_x5F_white$",
+    "tags": [
+     "ellipse"
+    ],
+    "attr": "fill",
+    "colour": "#CFC9BE"
+   }
+  ],
+  "ok.svg": [
+   {
+    "_": "the drummers' kit: brass cymbals and cowbells, red snare, mint toms, pink kick",
+    "within": "^(cymbal|hihat|cowbella|cowbellb|cymbalstand|hihat_x5F_pin)(_\\d+_)?$",
+    "attr": "stroke",
+    "colour": "#FFC93C"
+   },
+   {
+    "within": "^snaredrum(_\\d+_)?$",
+    "attr": "stroke",
+    "colour": "#FF5A3C"
+   },
+   {
+    "within": "^(tommount|ht|lt)(_\\d+_)?$",
+    "attr": "stroke",
+    "colour": "#7DE2D1"
+   },
+   {
+    "within": "^bd(_\\d+_)?$",
+    "attr": "stroke",
+    "colour": "#FF7AB6"
+   }
+  ],
+  "com.svg": [
+   {
+    "_": "the OP-XY drawing's four encoders in their own colours",
+    "tags": [
+     "circle",
+     "ellipse"
+    ],
+    "attr": "fill",
+    "region": [
+     20,
+     55,
+     160,
+     85
+    ],
+    "min": [
+     8,
+     8
+    ],
+    "mode": "column",
+    "columns": [
+     20,
+     57,
+     92,
+     127,
+     160
+    ],
+    "colours": [
+     "enc1.main",
+     "enc2.main",
+     "enc3.main",
+     "enc4.main"
+    ]
+   }
+  ],
+  "battery_low.svg": [
+   {
+    "_": "the gauge: red needle, ticks from red (empty) to green (full)",
+    "within": "^meter$",
+    "attr": "stroke",
+    "colour": "#E5371B"
+   },
+   {
+    "within": "^ticks$",
+    "attr": "stroke",
+    "mode": "order",
+    "colours": [
+     "#E5371B",
+     "#EE5A22",
+     "#F27D2A",
+     "#F5A031",
+     "#F2C23A",
+     "#D8CF45",
+     "#B0D04E",
+     "#86C957",
+     "#5CBF5E",
+     "#3FB062",
+     "#2FA060"
+    ]
+   }
+  ],
+  "game.svg": [
+   {
+    "_": "the arena walls as a band of colour, left to right",
+    "within": "^walls$",
+    "attr": "fill",
+    "mode": "column",
+    "columns": [
+     0,
+     60,
+     120,
+     180,
+     240,
+     300,
+     360,
+     420,
+     480
+    ],
+    "colours": [
+     "FE9596",
+     "F8A052",
+     "D3B63B",
+     "85CD75",
+     "2FD1C9",
+     "6FC1F9",
+     "B6ABFB",
+     "F292D3"
+    ]
+   }
+  ],
+  "fmstrings2.svg": [
+   {
+    "_": "cube 1 of 8, near (gold) through red to far (violet); faces keep their shading",
+    "within": "^box1$",
+    "tags": [
+     "polygon"
+    ],
+    "attr": "fill",
+    "black": true,
+    "mode": "order",
+    "colours": [
+     "#EDC879",
+     "#EDC879",
+     "#EDC879"
+    ]
+   },
+   {
+    "_": "cube 2",
+    "within": "^box2$",
+    "tags": [
+     "polygon"
+    ],
+    "attr": "fill",
+    "black": true,
+    "mode": "order",
+    "colours": [
+     "#FFBE83",
+     "#FFBE83",
+     "#B16915"
+    ]
+   },
+   {
+    "_": "cube 3",
+    "within": "^box3$",
+    "tags": [
+     "polygon"
+    ],
+    "attr": "fill",
+    "black": true,
+    "mode": "order",
+    "colours": [
+     "#F3926F",
+     "#F3926F",
+     "#A34119"
+    ]
+   },
+   {
+    "_": "cube 4",
+    "within": "^box4$",
+    "tags": [
+     "polygon"
+    ],
+    "attr": "fill",
+    "black": true,
+    "mode": "order",
+    "colours": [
+     "#C94D58",
+     "#C94D58",
+     "#A43B44"
+    ]
+   },
+   {
+    "_": "cube 5",
+    "within": "^box5$",
+    "tags": [
+     "polygon"
+    ],
+    "attr": "fill",
+    "black": true,
+    "mode": "order",
+    "colours": [
+     "#C24D7F",
+     "#C24D7F",
+     "#7A294D"
+    ]
+   },
+   {
+    "_": "cube 6",
+    "within": "^box6$",
+    "tags": [
+     "polygon"
+    ],
+    "attr": "fill",
+    "black": true,
+    "mode": "order",
+    "colours": [
+     "#924084",
+     "#702D65",
+     "#2E0829"
+    ]
+   },
+   {
+    "_": "cube 7",
+    "within": "^box7$",
+    "tags": [
+     "polygon"
+    ],
+    "attr": "fill",
+    "black": true,
+    "mode": "order",
+    "colours": [
+     "#613479",
+     "#260C34",
+     "#260C34"
+    ]
+   },
+   {
+    "_": "cube 8",
+    "within": "^box8$",
+    "tags": [
+     "polygon"
+    ],
+    "attr": "fill",
+    "black": true,
+    "mode": "order",
+    "colours": [
+     "#1B113B",
+     "#1B113B",
+     "#1B113B"
+    ]
+   },
+   {
+    "_": "the four knob dots the OS places on the axes",
+    "within": "^dot1$",
+    "black": true,
+    "colour": "enc1.main"
+   },
+   {
+    "within": "^dot2$",
+    "black": true,
+    "colour": "enc2.main"
+   },
+   {
+    "within": "^dot3$",
+    "black": true,
+    "colour": "enc3.main"
+   },
+   {
+    "within": "^dot4$",
+    "black": true,
+    "colour": "enc4.main"
+   },
+   {
+    "_": "value pop-ups in their knob's colour; dark text on the white one",
+    "within": "^valbox1$",
+    "tags": [
+     "path"
+    ],
+    "black": true,
+    "colour": "enc1.main"
+   },
+   {
+    "within": "^valbox2$",
+    "tags": [
+     "path"
+    ],
+    "black": true,
+    "colour": "enc2.main"
+   },
+   {
+    "within": "^valbox3$",
+    "tags": [
+     "path"
+    ],
+    "black": true,
+    "colour": "enc3.main"
+   },
+   {
+    "within": "^valbox4$",
+    "tags": [
+     "path"
+    ],
+    "black": true,
+    "colour": "enc4.main"
+   },
+   {
+    "within": "^valbox4$",
+    "tags": [
+     "text"
+    ],
+    "attr": "fill",
+    "colour": "#000000"
+   },
+   {
+    "_": "header text on the light cells (knobs 3-4) goes dark, as on Prism",
+    "within": "^(titles|values)$",
+    "tags": [
+     "text"
+    ],
+    "attr": "fill",
+    "region": [
+     240,
+     -10,
+     480,
+     25
+    ],
+    "colour": "#000000"
+   }
+  ],
+  "organ.svg": [
+   {
+    "_": "each drawbar rail in its knob's colour (the OS slides these up and down)",
+    "within": "^faders$",
+    "tags": [
+     "line"
+    ],
+    "attr": "stroke",
+    "min": [
+     0,
+     100
+    ],
+    "mode": "column",
+    "columns": [
+     0,
+     120,
+     240,
+     360,
+     480
+    ],
+    "colours": [
+     "enc1.main",
+     "enc2.main",
+     "enc3.main",
+     "enc4.main"
+    ]
+   }
+  ],
+  "dissolve.svg": [
+   {
+    "_": "noise grid recoloured; device test 2026-10-26: not shown (the OS paints its own grid from the palette). Harmless; kept as a record.",
+    "within": "^noise$",
+    "tags": [
+     "rect"
+    ],
+    "attr": "fill",
+    "mode": "rank",
+    "colours": [
+     "#4B2A8C",
+     "#B0409A",
+     "#FFD6A0"
+    ]
+   }
+  ],
+  "clock.svg": [
+   {
+    "_": "station-clock second hand; where the OS shows clock.svg is unknown (not found on the device 2026-10-26). Harmless.",
+    "within": "^hand_x5F_sec$",
+    "attr": "stroke",
+    "colour": "#E5371B"
+   }
+  ],
+  "sample_editor.svg": [
+   {
+    "_": "the sample-record waveform field (path 62..417 x 80..140 plus the two full-width rects closing it to y 150); the OS draws the wave black on it (screen grab colours-009e). Sky, grey8 lightness",
+    "tags": [
+     "path",
+     "rect"
+    ],
+    "attr": "fill",
+    "region": [
+     200,
+     100,
+     280,
+     150
+    ],
+    "min": [
+     300,
+     7
+    ],
+    "colour": "#90D6FE"
+   }
+  ]
+ },
+ "files": {
+  "tempo.svg": {
+   "#7d7d7d": "#3F6E6A"
+  },
+  "sampler.svg": {
+   "#323232": "#003B36"
+  }
+ },
+ "_files_note": "tempo.svg: its panel grey also hides the nudge boxes and groove text until used, so that grey is swapped everywhere in the file; sampler.svg: #323232 is only the three waveform panels (left/right/mono), teal at grey2 lightness (screen grab colours-009c showed the field is these panels)",
+ "text": {
+  "_": "bigger text (opxy_text.py defaults: 10px x1.4, 14px x1.2, 20px x1.1, fitted). Proven on device 2026-10-26 with generic_fx2.svg."
+ },
+ "inserts": {
+  "_": "Axis (fmstrings2.svg) has no parameter-bar cells in stock; add Prism's 8-cell bar under its header text.",
+  "fmstrings2.svg": [
+   {
+    "before_id": "values",
+    "svg": "<g><rect x=\"0\" fill=\"{enc1.dim}\" width=\"60\" height=\"20\"/><rect x=\"60\" fill=\"{enc1.main}\" width=\"60\" height=\"20\"/><rect x=\"120\" fill=\"{enc2.dim}\" width=\"60\" height=\"20\"/><rect x=\"180\" fill=\"{enc2.main}\" width=\"60\" height=\"20\"/><rect x=\"240\" fill=\"{enc3.dim}\" width=\"60\" height=\"20\"/><rect x=\"300\" fill=\"{enc3.main}\" width=\"60\" height=\"20\"/><rect x=\"360\" fill=\"{enc4.dim}\" width=\"60\" height=\"20\"/><rect x=\"420\" fill=\"{enc4.main}\" width=\"60\" height=\"20\"/></g>"
+   }
+  ]
+ }
+}
